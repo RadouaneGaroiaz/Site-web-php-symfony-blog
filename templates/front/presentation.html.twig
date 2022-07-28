@@ -1,0 +1,132 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bienvenu sur mon blog{% endblock %}
+
+{% block metaDescription %}
+    <meta name="description" content="Infos Sportives | Blog">
+{% endblock %}
+
+{% block ogMeta %}
+    <!-- block og:meta (facebook) : url, title and description -->
+    <meta property="og:url" content="{{ app.request.uri }}" />
+    <meta property="og:title" content="Infos Sportives | Blog" />
+    <meta property="og:description" content="Infos Sportives | Blog est un site qui vous permet de publier des articles sportives, et regarder des articles en ligne." />
+{% endblock %}
+
+{% block JSON %}
+    <!-- block SEO JSON -->
+    <script type='application/ld+json'>
+        {
+            "@context": "http://www.schema.org",
+            "@type": "WebSite",
+            "name": "Infos Sportives | Blog",
+            "url": "{{ app.request.uri }}"
+        }
+    </script>
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/presentation.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+{% endblock %}
+
+{% block body %}
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-10 offset-1 text-center mt-5">
+                <h1 class="position-relative">Articles !</h1>
+                </div>
+            </div>
+        </div>
+        <div class="presentation-orange-stripe py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-10 offset-1 text-center mt-5 mb-3">
+                    <h2 class="text-white">Pop In the City édition Mystère !</h2>
+                    <br class="mt-5 mb-5 text-presentation text-justify">
+                        Pop In the City, c’est un raid urbain féminin dont l’objectif est la découverte d’une ville de manière insolite et ludique.
+                        Cela se déroule sur toute une journée et il faut être en équipe de 2.</br> On retrouve les mêmes codes que pour une course avec
+                        le fameux dossard, la ligne d’arrivée, <strong>le podium…</strong> Il y a 30 challenges répartis en 5 catégories : culture, art, sport,
+                        solidarité et extrême. L’objectif ? Faire le plus de challenges possibles et kiffer !!! Il n’y a pas d’ordre prédéfinit
+                        pour faire les challenges, <strong>chaque équipe imagine son parcours</strong> en résolvant des énigmes pour trouver les lieux des challenges.</br>
+                        Un concept hyper fun, unique et décalé pour jouer les touristes dans une ville de façon inédite.
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="presentation-white-stripe py-4">
+            <div class="container">
+                <div class="row">
+                    <div data-aos="fade-left" class="col-10 offset-1 text-center mt-5 mb-3">
+                    <h2>World Clean Up Day</h2>
+                    <p class="mt-5 mb-5 text-presentation text-justify">Le World Clean Up Day c’est un projet international qui a pour objectif de générer une prise
+                        de conscience sur la problématique <strong>es déchets sauvages.</br></strong>d Il y a 150 pays qui participent à cette mobilisation avec pour ambition de nettoyer
+                        la planète en 1 jour. La France s’est lancé le défi de mobiliser 5 % de sa population soit <strong>3,5 millions de citoyens</strong>.</br> C’est énorme, mais
+                        ensemble, en faisant passer le mot, en invitant ses amis, sa famille et ses proches, on peut y arriver.
+
+                        Chaque parcours a été imaginé pour que que débutants ou <span class="font-weight-bold">confirmés puissent</span> se joindre à nous alors venez nombreux pour découvrir les joies du plogging !
+                        Pour ma part, je serai présente à Nice où nous clôturons notre session par un déjeuner gourmand chez<span class="font-weight-bold">Marinette Kitchen.</span>
+
+                        Malgré ce que l’on pourrait croire, <strong>le World Clean Up Day</strong> n’a pas vocation à être un rendez-vous annuel. Il n’y aura peut-être pas d’autres
+                        15 septembre organisés comme celui-ci donc c’est samedi ou jamais pour se mobiliser avec un grand M !
+
+                    </p>
+                    </div>
+                </div>
+            </div>     
+        </div>
+
+        <div class="presentation-white-stripe py-4">
+            <div class="container">
+                <div class="row">
+                    <div data-aos="fade-left" class="col-10 offset-1 text-center mt-5 mb-3">
+                    <h2>Mon équipe préferer !</h2>
+                        <p class="mt-5 mb-5 text-presentation text-justify">Le <strong>FC Barcelone</strong> a réalisé lundi ce mardi la photo officielle de l'exercice 2019-20.</br>
+                        Pour l'occasion, les joueurs de l'équipe première ont posé aux côtés des féminines.
+                    </p>
+
+                    <figure>
+                        <img class="img-fluid" src="{{ asset('https://t.resfu.com/media/img_news/foto-oficial-de-los-equipos-masculino-y-femenino-del-barca--fcbarcelona.jpg?size=776x&q=60') }}" alt="Un exemple de carte mémoire">
+                        <figcaption class="px-sm-5">Le club catalan a en effet regroupé plusieurs de ses équipes afin de réaliser la photo officielle de la saison actuelle.
+                            Et pour l'occasion, Griezmann, Lionel Messi ou encore
+                            De Jong ont pris la pose aux côtés des féminines du Barça.
+                        </figcaption>
+                    </figure>
+                    
+
+                    </div>
+                </div>
+            </div>     
+        </div>
+        <div class="presentation-orange-stripe py-4">
+            <div class="container">
+                <div class="row">
+                    <div data-aos="fade-right" class="col-10 offset-1 text-center mt-5 mb-3">
+                        <p class="mt-5 mb-5 text-presentation text-justify">Bonnes rédaction, amusez-vous bien !</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="presentation-white-stripe presentation-last-stripe pt-4">
+            <div class="container">
+                <div class="row">
+                    <div data-aos="fade-left" class="col-10 offset-1 text-center mt-5 mb-3">
+
+
+
+
+                    </div>
+                </div>
+            </div>     
+        </div>
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+{% endblock %}

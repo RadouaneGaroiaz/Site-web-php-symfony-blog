@@ -1,0 +1,110 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Infos Sportives | Blog{% endblock %}
+
+{% block metaDescription %}
+    <meta name="description" content="Blog pour publier vos article de sports !">
+{% endblock %}
+
+{% block ogMeta %}
+    <!-- block og:meta (facebook) : url, title and description -->
+    <meta property="og:url" content="{{ app.request.uri }}" />
+    <meta property="og:title" content="Infos Sportifs | Blog" />
+    <meta property="og:description" content="Bienvenue dans Infos Sportifs | Blog  !" />
+{% endblock %}
+
+{% block JSON %}
+    <!-- block SEO JSON -->
+    <script type='application/ld+json'>
+        {
+            "@context": "http://www.schema.org",
+            "@type": "WebSite",
+            "name": "Infos Sportives | Blog",
+            "url": "{{ app.request.uri }}"
+        }
+    </script>
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+{% endblock %}
+
+{% block body %}
+
+    <section class="container main-section">
+
+    {% if not app.user %}
+        <div class="row">
+            <div class="col-10 offset-1 text-center homepage-presentation mt-5">
+               <h1 class="position-relative">Bienvenue sur Infos Sportives | Blog</h1>
+                
+                <p class="mt-5 lead text-justify">Vous souhaitez étre informer de l'actualité sportives de France ?
+                    Vous désirez parfaire l’apprentissage d’une sport ?
+                    Vous voulez savoir les résultats des matches en temps réel ? Vous voulez des infos sur votre équipe préférer ?
+                    Ne cherchez plus, <span class="font-weight-bold">Infos Sportives | Blog</span> est fait pour vous !</p>
+
+                <span data-aos="fade-left" class="fa fa-lightbulb-o message-icon mt-5" aria-hidden="true"></span>
+                <h2 data-aos="fade-left" data-aos-offset="150" class="mt-5">Chloé, 1m54 de bonne humeur !</h2>
+                <p data-aos="fade-left" data-aos-offset="180" class="mt-3 text-presentation text-justify">
+                    J’ai 23 ans, je suis un jeune femme débordante d’énergie qui préfère toujours voir la<strong>tablette de chocolat</strong>  à moitié pleine. Ni ma petite taille, ni ma bouille juvénile ne m’empêchent d’être bien dans mes baskets et de sourire à la vie !
+
+                    Depuis ma plus tendre enfance, le sport fait partie intégrante de mon quotidien.</br> Après 15 ans sur les terrains de basket, je m’épanouis aujourd’hui en course à pied. Je suis<strong>marathonienne </strong> mais j’ai un gros faible pour le dénivelé et les courses nature.
+
+                    Basée à Bordeaux et gaga de mon beau <strong>Sud-Ouest</strong>, je suis toujours en vadrouilles pour découvrir d’autres horizons en France ou ailleurs.</br> J’ai pris goût aux voyages quand je vivais en Angleterre dans le cadre de mes études.
+
+                    BAC+5 en communication, je suis diplômée chef de projet web. À la fin de mon master, j’ai choisi de me créer un métier sur-mesure en me consacrant à mon blog. Parce qu’être blogueuse me passionne plus que tout, depuis mes débuts en 2010.
+
+
+                </p>
+                
+                <span data-aos="fade-right" class="fa fa-user-circle-o message-icon mt-5" aria-hidden="true"></span>
+                <h2 data-aos="fade-right" data-aos-offset="150" class="mt-5">ÉTIREMENTS DES JAMBES</h2>
+                <p data-aos="fade-right" data-aos-offset="180" class="mt-3 text-presentation text-justify">Suite à l’accueil de son premier cours de yoga avec ma maman qui est enseignante de yoga depuis 2011, je lui ai demandé de vous concocter un nouveau cours et pas des moindres puisqu’il s’agit d’un <strong>focus étirements</strong> des jambes !!!
+
+                    Je dois vous l’avouer : c’est mon point faible ! J’ai le derrière des genoux tellement raides et je touche à peine mes orteils lorsque ma<strong>jambe est tendue</strong> … Ma maman m’a toujours proposé des étirements pour tenter d’assouplir mes jambes et comme je ne suis pas très régulière, je suis toujours assez raide des gambettes.
+             </p>
+                
+                <span data-aos="fade-left" class="fa fa-heart message-icon mt-5" aria-hidden="true"></span>
+                <h2 data-aos="fade-left" data-aos-offset="150" class="mt-5">Mes Mizuno Wave Sky 3 au Japon !</h2>
+                <p data-aos="fade-left" data-aos-offset="180" class="mt-3 text-presentation text-justify">Si la gamme textile est testée et approuvée depuis belle lurette,
+                    grande nouveauté de la rentrée, j’ai aussi adopté les <strong>chaussures de running Mizuno</strong>. Depuis début septembre dans le cadre de ma
+                    préparation marathon je cours avec les Mizuno Wave Sky 3. Elles sont conseillées pour les coureurs longues distances qui recherchent
+                    un amorti ultra souple, des <strong>chaussures confortables</strong> et un très bon maintien. Ces petites Wave Sky 3 de Mizuno me correspondent
+                    très bien pour enchaîner les kilomètres et j’ai hâte de les emmener jusqu’au bout de mon prochain marathon…
+                    <a href="{{ path('presentation') }}" title="Presentation">la page de présentation</a>.
+                </p>
+                
+                <span data-aos="fade-right" class="fa fa-check message-icon mt-5" aria-hidden="true"></span>
+                <h2 data-aos="fade-right" data-aos-offset="150" class="mt-5">N'attendez plus pour améliorer votre
+                    coonnaissance sportives</h2>
+                <p data-aos="fade-right" data-aos-offset="180" class="mt-3 mb-5 text-presentation text-justify">Vous
+                    souhaitez devenir un journaliste du sports
+
+                    <strong></strong> ? N’attendez plus et inscrivez-vous sur Infos sportives blog en en vous rendant sur
+                    <a href="{{ path('security_registration') }}" title="S'inscrire sur l'application">la page d’inscription</a>.
+                    Si vous êtes déjà inscrit, rendez-vous sur <a href="{{ path('security_login') }}" title="Créer mon premier article sportives">la page de connexion</a>.
+                </p>
+            </div>
+        </div>
+    {% endif %}
+
+
+
+
+
+
+
+
+
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/home.js') }}"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+{% endblock %}
